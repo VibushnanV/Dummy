@@ -134,6 +134,7 @@ color: var(--primary-color);
     background-color: #fff;
     height: calc(100dvh - 50px) ;
     margin-top: -10px;
+    overflow-y: auto;
 }
 .menubar:nth-child(odd){
   background-color: #fff !important;
@@ -181,10 +182,7 @@ color: var(--primary-color);
   font-size: 1.5rem;
   padding: 0.4rem;
 }
-::marker  nav ul li{
-  content:'#';
-  color:#2a7c;
-}
+
 .contanctInfo{
   display: grid;
   align-items: center;
@@ -285,4 +283,46 @@ color: var(--primary-color);
   padding: 1rem 2.5rem;
   border: 1px solid #fff;
   border-radius: 8px;
+}
+
+/*Media Queries */
+
+@media (max-width: 992px) {
+  body{
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: calc(100vh - 200px) !important;
+  }
+  .card-content{
+    flex-basis: 100% !important;
+  }
+  .menubar{
+    height:max-content;
+    overflow-y: auto;
+  }
+  .menucontent{
+    height: max-content;
+    overflow: hidden;
+    margin-top: 2rem;
+    display: inline-block;
+    width: 100%;
+  }
+  .contanctInfo{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+  }
+  .toolbar{
+    height: max-content !important;
+    justify-content: center;
+  }
+  nav ul{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    flex-grow: 1;
+  }
+
 }
