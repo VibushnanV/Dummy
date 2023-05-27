@@ -1,0 +1,227 @@
+ /* Font Imports start */
+ @font-face {
+    font-family: "sfpro-l";
+    src: url(assets/fonts/SFProText-Light.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: "sfpro-r";
+    src: url(assets/fonts/SFProText-Regular.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: "sfpro-m";
+    src: url(assets/fonts/SFProText-Medium.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: "sfpro-sb";
+    src: url(assets/fonts/SFProText-Semibold.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: "sfpro-b";
+    src: url(assets/fonts/SFProText-Bold.ttf) format("opentype");
+  }
+   /* Font Imports End */
+
+/* CSS Reset Start */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "sfpro-r", sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --secondary-bg-color: #eee;
+    --primary-color:#2a7cf5
+  }
+  html {
+    height: 100dvh;
+    font-family: "sfpro-r", sans-serif;
+  }
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: var(--secondary-bg-color) !important;
+    font-family: "sfpro-r" !important;
+    scroll-behavior: smooth;
+  }
+  .row{
+    margin: 0px;
+  }
+  /* CSS Reset End */
+
+  /* Scroll bar styles start*/
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px !important;
+    background: #f8f8f8 !important;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #ccc !important;
+  }
+   /* Scroll bar styles End*/
+
+   @keyframes fadeInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .portfolio {
+    animation: fadeInFromLeft 0.4s ease;
+  }
+
+.headContainer{
+    padding-inline: 1rem;
+    padding-block: 3rem;
+    background-color: #44566C;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+.heading{
+    columns: 2 auto;
+    column-rule: 2px solid hsl(210, 14%, 95%); 
+}
+.headename{
+    font-size: 2rem;
+    color: #fff;
+    vertical-align: middle;
+    margin-left: 0.5em;
+}
+.socialIcons{
+    columns: 3 auto;
+    column-rule: 2px solid hsl(210, 14%, 95%); 
+    padding-right: 2rem;
+    column-gap: 2rem;
+    cursor: pointer;
+}
+
+.gitIcon:hover ,.linkedinIcon:hover,.mailIcon:hover, .downloadIcon:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+.pr-tc{
+    position: relative;
+    text-align: center;
+
+}
+.iconStyle{
+    font-size: 2rem;
+}
+.primary_color{
+color: var(--primary-color);
+}
+.portfolio{
+    margin-top: 1rem;
+}
+.menubar{
+    background-color: #fff;
+    height: calc(100dvh - 50px) ;
+    margin-top: -10px;
+}
+.menubar:nth-child(odd){
+  background-color: #fff !important;
+}
+.menubar:nth-child(even){
+  background-color: #181a1c !important;
+}
+.profilePic{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.Profile_img{
+  border: 1px solid #d9cfcf;
+    border-radius: 20%;
+}
+.profile_details{
+  text-align: center;
+    margin-top: 1rem;
+    font-size: 2.3rem;
+    color: #44566C;
+    font-weight: 500;
+    font-family: 'Font Awesome 5 Free';
+}
+.position{
+  font-size: 1rem;
+  background-color: #F5F6F7;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-weight: 700;
+  color: #0C134F;
+}
+.toolbar{
+  display: flex;
+  align-items: center;
+  background-color: #F5F8F9;
+  height: max(220px, 30dvh);
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #181a1c;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #277ef3;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+}
+nav ul li a:active{
+  border-bottom: #277ef3;
+}
+.contanctInfo{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1em;
+}
+.text-center{
+  font-size: 1.5rem;
+  padding: 5px;
+  font-weight: 700;
+  color: #0C134F;
+}
+.menucontent{
+  height: calc(100dvh - 80px) ;
+  border-radius: 8px;
+  border: transparent;
+  background-color: #fff;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  box-shadow: 0 2.5rem 3.125rem rgba(103, 118, 128, 0.1) !important;
+}
+ 
