@@ -41,13 +41,14 @@
   html {
     height: 100dvh;
     font-family: "sfpro-r", sans-serif;
+    scroll-behavior: smooth !important;
   }
   body {
     margin: 0;
     overflow: hidden;
     background: var(--secondary-bg-color) !important;
     font-family: "sfpro-r" !important;
-    scroll-behavior: smooth;
+   
   }
   .row{
     margin: 0px;
@@ -171,36 +172,18 @@ color: var(--primary-color);
   align-items: center;
   background-color: #F5F8F9;
   height: max(220px, 30dvh);
+  justify-content: flex-start;
+  padding: 1rem 2rem;
 }
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 10px 20px;
-}
-
-nav ul li a {
+  nav ul li {
   color: #181a1c;
-  text-decoration: none;
-  font-size: 18px;
-  position: relative;
+  list-style-type:disc;
+  font-size: 1.5rem;
+  padding: 0.4rem;
 }
-
-nav ul li a::after {
-  content: '';
-  width: 0;
-  height: 3px;
-  background: #277ef3;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-}
-
-nav ul li a:hover:after {
-  width: 100%;
-}
-nav ul li a:active{
-  border-bottom: #277ef3;
+::marker  nav ul li{
+  content:'#';
+  color:#2a7c;
 }
 .contanctInfo{
   display: grid;
@@ -223,5 +206,83 @@ nav ul li a:active{
   margin-left: 1rem;
   margin-right: 1.5rem;
   box-shadow: 0 2.5rem 3.125rem rgba(103, 118, 128, 0.1) !important;
+  padding: 2rem;
+  overflow-y: auto;
 }
- 
+
+.title{
+  font-size: 3rem;
+  color: #277ef3;
+  font-family:"sfpro-sb";
+}
+.contents{
+  color: #44566C;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+.absPos{
+  position: absolute;
+  top: -20%;
+  left: 93%;
+
+}
+.hr{
+  margin-bottom: 1rem;
+}
+.contents  li {
+  padding: 1rem;
+}
+.cards{
+  background-color: #F5F8F9;
+  border: 1ps solid #fff;
+  border-radius: 8px;
+}
+.text-small{
+  color: #44566C;
+  font-size: 1.3rem;
+}
+.jobTitle{
+  font-family:"sfpro-sb";
+  font-size: 2rem;
+}
+.projects{
+  display: grid;
+  gap: 1rem;
+}
+.projectTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.projectIcon{
+  font-size: 4rem;
+  color: #277ef3;
+  background-color: #fff;
+  border-radius: 50%;
+    padding-inline: 1rem;
+}
+.flex-card{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.card-content:first-child{
+  flex-basis: 100% !important;
+  flex-grow: 1;
+  background-color: floralwhite;
+  padding: 1rem 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+.card-content{
+  flex-basis: 40% !important;
+  flex-grow: 1;
+  background-color: floralwhite;
+  padding: 1rem 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
